@@ -1,0 +1,138 @@
+﻿@model EssentialJS1WebApplication1.Models.AFacilities
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AFacilities</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FacilityCode" class="control-label"></label>
+                <input asp-for="FacilityCode" class="form-control" />
+                <span asp-validation-for="FacilityCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeliveryZoneCode" class="control-label"></label>
+                <select asp-for="DeliveryZoneCode" class ="form-control" asp-items="ViewBag.DeliveryZoneCode"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImplimentingPartnerCode" class="control-label"></label>
+                <input asp-for="ImplimentingPartnerCode" class="form-control" />
+                <span asp-validation-for="ImplimentingPartnerCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DistrrictCode" class="control-label"></label>
+                <select asp-for="DistrrictCode" class ="form-control" asp-items="ViewBag.DistrrictCode"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Facility" class="control-label"></label>
+                <input asp-for="Facility" class="form-control" />
+                <span asp-validation-for="Facility" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SapCode" class="control-label"></label>
+                <input asp-for="SapCode" class="form-control" />
+                <span asp-validation-for="SapCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupportedByMaul" class="control-label"></label>
+                <input asp-for="SupportedByMaul" class="form-control" />
+                <span asp-validation-for="SupportedByMaul" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsAccredited" class="control-label"></label>
+                <input asp-for="IsAccredited" class="form-control" />
+                <span asp-validation-for="IsAccredited" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LevelOfCare" class="control-label"></label>
+                <select asp-for="LevelOfCare" class ="form-control" asp-items="ViewBag.LevelOfCare"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClientTypeCode" class="control-label"></label>
+                <select asp-for="ClientTypeCode" class ="form-control" asp-items="ViewBag.ClientTypeCode"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegionCode" class="control-label"></label>
+                <input asp-for="RegionCode" class="form-control" />
+                <span asp-validation-for="RegionCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RfsoUserName" class="control-label"></label>
+                <input asp-for="RfsoUserName" class="form-control" />
+                <span asp-validation-for="RfsoUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnershipId" class="control-label"></label>
+                <select asp-for="OwnershipId" class ="form-control" asp-items="ViewBag.OwnershipId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CdcregionId" class="control-label"></label>
+                <select asp-for="CdcregionId" class ="form-control" asp-items="ViewBag.CdcregionId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FacilityTypeId" class="control-label"></label>
+                <select asp-for="FacilityTypeId" class ="form-control" asp-items="ViewBag.FacilityTypeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Longtitude" class="control-label"></label>
+                <input asp-for="Longtitude" class="form-control" />
+                <span asp-validation-for="Longtitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Latititude" class="control-label"></label>
+                <input asp-for="Latititude" class="form-control" />
+                <span asp-validation-for="Latititude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VillageId" class="control-label"></label>
+                <select asp-for="VillageId" class ="form-control" asp-items="ViewBag.VillageId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComprehensiveImplimentingPartnerCode" class="control-label"></label>
+                <select asp-for="ComprehensiveImplimentingPartnerCode" class ="form-control" asp-items="ViewBag.ComprehensiveImplimentingPartnerCode"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatientLoadCode" class="control-label"></label>
+                <select asp-for="PatientLoadCode" class ="form-control" asp-items="ViewBag.PatientLoadCode"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsActive" class="control-label"></label>
+                <input asp-for="IsActive" class="form-control" />
+                <span asp-validation-for="IsActive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NearestPublicHfDistance" class="control-label"></label>
+                <input asp-for="NearestPublicHfDistance" class="form-control" />
+                <span asp-validation-for="NearestPublicHfDistance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dsdm" class="control-label"></label>
+                <input asp-for="Dsdm" class="form-control" />
+                <span asp-validation-for="Dsdm" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ActiveArt" /> @Html.DisplayNameFor(model => model.ActiveArt)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,26 @@
+﻿@model EssentialJS1WebApplication1.Models.AFacilities
+
+@{
+    ViewData["Title"] = "Facility";
+}
+ 
+@section ControlsSection{
+    <ej-grid id="FacilityGrid" allow-paging="true">
+        <e-datamanager json="(IEnumerable<object>)ViewBag.datasource" update-url="Update" insert-url="Insert" remove-url="Delete" adaptor="remoteSaveAdaptor" />
+        <e-edit-settings allow-adding="true" allow-editing="true" allow-deleting="true" edit-mode="@(EditMode.Dialog)"></e-edit-settings>
+        <e-toolbar-settings show-toolbar="true" toolbar-items="@(new List<string>() {"add","edit","delete","update","cancel" })"></e-toolbar-settings>
+        <e-columns>
+            <e-column field="FacilityCode" header-text="Facility Code" is-primary-key="true" validation-rules='new Dictionary<string, object>() { {"required",true}, {"number",true} }' text-align="Right" width="75"></e-column>
+            <e-column field="Facility" header-text="Facility Name" width="200" validation-rules='new Dictionary<string, object>() { {"required",true}, }'></e-column>
+            <e-column field="DistrrictCode" header-text="District" edit-type="@(EditingType.DropdownEdit)" text-align="Right" width="150"></e-column>
+            <e-column field="FacilityTypeId" header-text="Facility Type" edit-type="@(EditingType.DropdownEdit)" text-align="Right" width="150"></e-column>
+            <e-column field="Longtitude" header-text="Longtitude" numeric-edit-options="@new EditorProperties(){ DecimalPlaces = 6}" edit-type="@(EditingType.NumericEdit)" validation-rules='new Dictionary<string, object>() { {"required",true}, {"range","[0,1000]"} }' text-align=Right width="105"></e-column>
+            <e-column field="Latititude" header-text="Latititude" numeric-edit-options="@new EditorProperties(){ DecimalPlaces = 6}" edit-type="@(EditingType.NumericEdit)" validation-rules='new Dictionary<string, object>() { {"required",true}, {"range","[0,1000]"} }' text-align=Right width="105"></e-column>
+            <e-column field="DeliveryZoneCode" header-text="Delivery Zone" edit-type="@(EditingType.DropdownEdit)" text-align="Left" width="110"></e-column>
+        </e-columns>
+    </ej-grid>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
